@@ -25,6 +25,6 @@ body .main section .characters {
   box-shadow: 5px 5px #582e2e;
   text-align: center;
 }
-body img {
-  max-width: 100px;
+body .main section .characters img {
+  max-width: 200px;
 }
