@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+   <head>
+       <title>Looney Toons</title>
+       <link rel='stylesheet' href='css/styles.css'>
+       <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+       <script>
+           $(document).ready(function(){
+              //  $.get("https://pokeapi.co/api/v2/pokemon/1/", function(res) {
+                $.get("https://looney-toons-api.herokuapp.com/api/characters/", function(res) {
+                   var html_str = "";
+                  //  html_str += "<h4>Types</h4>";
+                  html_str += "<h4>Images</h4>"
+                   html_str += "<ul>"; 
+                  //  for(var i = 0; i < res.types.length; i++) {
+                    for(var i = 0; i < res.data.length; i++) {
+                      //  html_str += "<li>" + res.types[i].type.name + "</li>";
+                      html_str += "<li>" + "<img src='" + res.data[i].img + "' alt='character img' />" + "</li>";
+                   }
+                   html_str += "</ul>";
+                   $("#bulbasaur").html(html_str);
+               }, "json");
+           })
+       </script>
+   </head>
+   <body>
+       <div id="bulbasaur">
+       </div>
+   </body>
+</html>
