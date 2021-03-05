@@ -1,0 +1,30 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f08080;
+}
+body .main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body .main section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body .main section .characters {
+  margin: 1em;
+  padding: 1em;
+  border: 5px double #582e2e;
+  box-shadow: 5px 5px #582e2e;
+  text-align: center;
+}
+body img {
+  max-width: 100px;
+}
